@@ -1,32 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search> 
-  
-  
-    
-    <entry>
-      <title>第一篇文章</title>
-      <link href="/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/"/>
-      <url>/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</url>
-      
-        <content type="html"><![CDATA[<p>这是我的第一个博客</p><h2 id="这是标题"><a href="#这是标题" class="headerlink" title="这是标题"></a>这是标题</h2><p>这是代码块</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alert(<span class="string">&quot;Hello World&quot;</span>);</span><br></pre></td></tr></table></figure>]]></content>
-      
-      
-      <categories>
-          
-          <category> H5 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 前端 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-  
-  
+<search>
+  <entry>
+    <title>欢迎来到我的博客</title>
+    <url>/hello%20world/</url>
+    <content><![CDATA[<h1 id="欢迎来到我的博客"><a href="#欢迎来到我的博客" class="headerlink" title="欢迎来到我的博客"></a>欢迎来到我的博客</h1>]]></content>
+  </entry>
 </search>
