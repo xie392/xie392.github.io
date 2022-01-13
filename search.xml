@@ -1,8 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>欢迎来到我的博客</title>
-    <url>/hello%20world/</url>
-    <content><![CDATA[<h1 id="欢迎来到我的博客"><a href="#欢迎来到我的博客" class="headerlink" title="欢迎来到我的博客"></a>欢迎来到我的博客</h1>]]></content>
+    <title>上传项目至GitHub</title>
+    <url>/share/github/</url>
+    <content><![CDATA[<h3 id="git常用指令"><a href="#git常用指令" class="headerlink" title="git常用指令"></a>git常用指令</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git --version                                  # 查看版本</span><br><span class="line">git init                                       # 初始化仓库</span><br><span class="line">git config --global user.name  &quot;name&quot;          # 配置名称</span><br><span class="line">git config --global user.email &quot;@qq.com&quot;       # 配置邮箱    </span><br><span class="line">git add ./                                     # 添加文件，./代表当前目录</span><br><span class="line">git status                                     # 检查代码状态    </span><br><span class="line">git commit -m &quot;name&quot;                           # 添加内容</span><br><span class="line">git log --oneline                              # 查看记录</span><br><span class="line">git reset --hard Head~0(1)                     # 修改版本     </span><br><span class="line">git reset ---hard &quot;version&quot;                    # 回退指定版本号</span><br><span class="line">git reflog                                     # 查看历史操作</span><br><span class="line">git branch &quot;name&quot;                              # 创建分支        </span><br><span class="line">git branch                                     # 查看分支        </span><br><span class="line">git checkout dev                               # 切换分支，[-b] 创建并切换</span><br><span class="line">git branch -d/-D &quot;name&quot;                        # 删除分支        </span><br><span class="line">git merge &quot;name&quot;                               # 合并分支</span><br><span class="line">git clone http:...                             # 克隆代码</span><br></pre></td></tr></table></figure>
+
+<h3 id="上传项目"><a href="#上传项目" class="headerlink" title="上传项目"></a>上传项目</h3><p>1.首次配置仓库</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git config --global user.name  &quot;xie392&quot;  </span><br><span class="line">git config --global user.email &quot;2636.@qq.com&quot;</span><br></pre></td></tr></table></figure>
+
+<p>2.初始化仓库</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git init </span><br></pre></td></tr></table></figure>
+
+<p>3.推送内容到仓库</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git add ./</span><br></pre></td></tr></table></figure>
+
+<p>4.添加内容名称（必须）</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git commit -m &quot;name&quot;</span><br></pre></td></tr></table></figure>
+
+<p>5.连接远程仓库</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git remote add origin https:xie392...</span><br></pre></td></tr></table></figure>
+
+<p>6.上传至远程仓库(第一次推送会让你输入账号密码)</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
+
+<p>完成以上步骤基本已经完成，下面可以选择做或不做</p>
+<h3 id="配置密钥-ssh-key"><a href="#配置密钥-ssh-key" class="headerlink" title="配置密钥 ssh key"></a>配置密钥 ssh key</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;2636.qq.com&quot;</span><br></pre></td></tr></table></figure>
+<p>生成的密钥在”C:\Users\Administrator.ssh”目录下,把目录下的”id_rsa.pub”文件打开并复制里面的内容<br>来到github仓库，点击 Settings(设置)-Deploy keys(部署密钥)-Add Deploy keys(添加部署密钥)</p>
+<h3 id="常见报错"><a href="#常见报错" class="headerlink" title="常见报错"></a>常见报错</h3><h4 id="error-remote-origin-already-exists"><a href="#error-remote-origin-already-exists" class="headerlink" title="error: remote origin already exists."></a>error: remote origin already exists.</h4><p>错误原因：远程来源已经存在<br>解决方法：<br>删除关联的origin的远程库</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git remote rm origin</span><br></pre></td></tr></table></figure>
+<p>重新关联origin的远程库</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git remote add origin https:xie392...</span><br></pre></td></tr></table></figure>
+<h4 id="fatal-Could-not-read-from-remote-repository"><a href="#fatal-Could-not-read-from-remote-repository" class="headerlink" title="fatal: Could not read from remote repository."></a>fatal: Could not read from remote repository.</h4><p>错误原因：客户端与服务端未生成 ssh key 或客户端与服务端的 ssh key 不匹配<br>解决方法：重新生成新的 ssh key</p>
+]]></content>
+      <categories>
+        <category>分享</category>
+      </categories>
+      <tags>
+        <tag>GitHub</tag>
+      </tags>
   </entry>
 </search>
