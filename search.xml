@@ -3,9 +3,7 @@
   <entry>
     <title>上传项目至GitHub</title>
     <url>/share/github/</url>
-    <content><![CDATA[<h3 id="git常用指令"><a href="#git常用指令" class="headerlink" title="git常用指令"></a>git常用指令</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git --version                                  # 查看版本</span><br><span class="line">git init                                       # 初始化仓库</span><br><span class="line">git config --global user.name  &quot;name&quot;          # 配置名称</span><br><span class="line">git config --global user.email &quot;@qq.com&quot;       # 配置邮箱    </span><br><span class="line">git add ./                                     # 添加文件，./代表当前目录</span><br><span class="line">git status                                     # 检查代码状态    </span><br><span class="line">git commit -m &quot;name&quot;                           # 添加内容</span><br><span class="line">git log --oneline                              # 查看记录</span><br><span class="line">git reset --hard Head~0(1)                     # 修改版本     </span><br><span class="line">git reset ---hard &quot;version&quot;                    # 回退指定版本号</span><br><span class="line">git reflog                                     # 查看历史操作</span><br><span class="line">git branch &quot;name&quot;                              # 创建分支        </span><br><span class="line">git branch                                     # 查看分支        </span><br><span class="line">git checkout dev                               # 切换分支，[-b] 创建并切换</span><br><span class="line">git branch -d/-D &quot;name&quot;                        # 删除分支        </span><br><span class="line">git merge &quot;name&quot;                               # 合并分支</span><br><span class="line">git clone http:...                             # 克隆代码</span><br></pre></td></tr></table></figure>
-
-<h3 id="上传项目"><a href="#上传项目" class="headerlink" title="上传项目"></a>上传项目</h3><p>1.首次配置仓库</p>
+    <content><![CDATA[<h3 id="上传项目"><a href="#上传项目" class="headerlink" title="上传项目"></a>上传项目</h3><p>1.首次配置仓库</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git config --global user.name  &quot;xie392&quot;  </span><br><span class="line">git config --global user.email &quot;2636.@qq.com&quot;</span><br></pre></td></tr></table></figure>
 
 <p>2.初始化仓库</p>
@@ -31,6 +29,22 @@
 <p>重新关联origin的远程库</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git remote add origin https:xie392...</span><br></pre></td></tr></table></figure>
 <h4 id="fatal-Could-not-read-from-remote-repository"><a href="#fatal-Could-not-read-from-remote-repository" class="headerlink" title="fatal: Could not read from remote repository."></a>fatal: Could not read from remote repository.</h4><p>错误原因：客户端与服务端未生成 ssh key 或客户端与服务端的 ssh key 不匹配<br>解决方法：重新生成新的 ssh key</p>
+<h3 id="git常用指令"><a href="#git常用指令" class="headerlink" title="git常用指令"></a>git常用指令</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git --version                                  # 查看版本</span><br><span class="line">git init                                       # 初始化仓库</span><br><span class="line">git config --global user.name  &quot;name&quot;          # 配置名称</span><br><span class="line">git config --global user.email &quot;@qq.com&quot;       # 配置邮箱    </span><br><span class="line">git add ./                                     # 添加文件，./代表当前目录</span><br><span class="line">git status                                     # 检查代码状态    </span><br><span class="line">git commit -m &quot;name&quot;                           # 添加内容</span><br><span class="line">git log --oneline                              # 查看记录</span><br><span class="line">git reset --hard Head~0(1)                     # 修改版本     </span><br><span class="line">git reset ---hard &quot;version&quot;                    # 回退指定版本号</span><br><span class="line">git reflog                                     # 查看历史操作</span><br><span class="line">git branch &quot;name&quot;                              # 创建分支        </span><br><span class="line">git branch                                     # 查看分支        </span><br><span class="line">git checkout dev                               # 切换分支，[-b] 创建并切换</span><br><span class="line">git branch -d/-D &quot;name&quot;                        # 删除分支        </span><br><span class="line">git merge &quot;name&quot;                               # 合并分支</span><br><span class="line">git clone http:...                             # 克隆代码</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ]]></content>
       <categories>
         <category>分享</category>
