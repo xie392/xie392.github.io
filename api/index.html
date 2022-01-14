@@ -1,0 +1,182 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>js笔记-数组和字符串API | XIE</title><meta name="keywords" content="JavaScript"><meta name="author" content="XIE"><meta name="copyright" content="XIE"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="js笔记-数组和字符串API">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js笔记-数组和字符串API">
+<meta property="og:url" content="https://xie392.github.io/api/index.html">
+<meta property="og:site_name" content="XIE">
+<meta property="og:description" content="js笔记-数组和字符串API">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://xie392.github.io/img/cover.jpg">
+<meta property="article:published_time" content="2022-01-14T03:36:44.000Z">
+<meta property="article:modified_time" content="2022-01-14T05:44:11.082Z">
+<meta property="article:author" content="XIE">
+<meta property="article:tag" content="JavaScript">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://xie392.github.io/img/cover.jpg"><link rel="shortcut icon" href="/img/logo.ico"><link rel="canonical" href="https://xie392.github.io/api/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":350},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: XIE","link":"链接: ","source":"来源: XIE","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'js笔记-数组和字符串API',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-01-14 13:44:11'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const fontSizeVal = saveToLocal.get('global-font-size')
+    if (fontSizeVal !== undefined) {
+      document.documentElement.style.setProperty('--global-font-size', fontSizeVal + 'px')
+    }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/logo.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">4</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/cover.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">XIE</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">js笔记-数组和字符串API</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-01-14T03:36:44.000Z" title="发表于 2022-01-14 11:36:44">2022-01-14</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-01-14T05:44:11.082Z" title="更新于 2022-01-14 13:44:11">2022-01-14</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/js%E7%AC%94%E8%AE%B0/">js笔记</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="js笔记-数组和字符串API"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h3 id="常见数组API"><a href="#常见数组API" class="headerlink" title="常见数组API"></a>常见数组API</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">push()         <span class="comment">// 往数组的尾部插入一个或多个元素</span></span><br><span class="line">pop()          <span class="comment">// 从数组的尾部删除一个元素</span></span><br><span class="line">unshift()      <span class="comment">// 往数组的头部插入一个或多个元素</span></span><br><span class="line">shift()        <span class="comment">// 从数组的头部删除一个元素</span></span><br><span class="line">slice()        <span class="comment">// 裁切数组</span></span><br><span class="line">splice()       <span class="comment">// 删除或替换数组某个元素</span></span><br><span class="line">concat()       <span class="comment">// 连接一个或多个数组, 不会修改原数组, 会返回连接出来的新数组</span></span><br><span class="line">join()         <span class="comment">// 以特定的连接符将一个数组连接成字符串, 不会修改原数组</span></span><br><span class="line">reverse()      <span class="comment">// 反转数组</span></span><br></pre></td></tr></table></figure>
+<h3 id="常见字符串API"><a href="#常见字符串API" class="headerlink" title="常见字符串API"></a>常见字符串API</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">charAt()                <span class="comment">// 获取指定下标的字符</span></span><br><span class="line">charCodeAt()            <span class="comment">// 如果不传参数, 把第0个字符转unicode编码</span></span><br><span class="line"><span class="built_in">String</span>.fromCharCode()   <span class="comment">// 静态方法,把unicode编码转成字符</span></span><br><span class="line">substring()             <span class="comment">// 裁切字符串,从开始下标裁切到结束下标,结束下标裁切不到</span></span><br><span class="line">split()                 <span class="comment">// 把字符串切割成数组  </span></span><br><span class="line">repeat()                <span class="comment">// 重复一个字符串n次                            </span></span><br><span class="line">trim()                  <span class="comment">// 去除字符串左右两边的空格, 中间的空格则不做处理</span></span><br><span class="line">toLowerCase()           <span class="comment">// 把字符串转小写</span></span><br><span class="line">toUpperCase()           <span class="comment">// 把字符串转大写</span></span><br><span class="line">replace()               <span class="comment">// 替换  </span></span><br><span class="line">indexOf()               <span class="comment">// 从头部开始检索下标</span></span><br><span class="line">lastIndexOf()           <span class="comment">// 从尾部开始检索下标</span></span><br></pre></td></tr></table></figure>
+<h3 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h3><h4 id="1-数组API"><a href="#1-数组API" class="headerlink" title="1.数组API"></a>1.数组API</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line"><span class="keyword">var</span> newArr = arr.push(<span class="number">4</span>);    <span class="comment">// 修改原数组,返回新数组长度 4,arr = [1, 2, 3, 4]</span></span><br><span class="line"><span class="keyword">var</span> newArr = arr.pop();      <span class="comment">// 修改原数组,返回被删除的元素 4,arr = [1, 2, 3]</span></span><br><span class="line"><span class="keyword">var</span> newArr = arr.unshift(<span class="number">0</span>); <span class="comment">// 修改原数组,返回新数组长度 4,arr = [0, 1, 2, 3]</span></span><br><span class="line"><span class="keyword">var</span> newArr = arr.shift();    <span class="comment">// 修改原数组,返回被删除的元素 0,arr = [1, 2, 3]</span></span><br><span class="line"><span class="keyword">var</span> newArr = arr.slice(<span class="number">0</span>,<span class="number">2</span>); <span class="comment">// 不会修改原数组,返回被裁切出来的数组 [1, 2],arr = [1, 2, 3]</span></span><br><span class="line"><span class="keyword">var</span> newArr = arr.slice(<span class="number">1</span>);   <span class="comment">// 如果只有一个参数, 则作为开始下标 裁切到数组尾部</span></span><br><span class="line"><span class="keyword">var</span> newArr = arr.splice(<span class="number">1</span>,<span class="number">2</span>);<span class="comment">// 会修改原数组,返回切割出来的数组 [2, 3],arr = [1]</span></span><br><span class="line"><span class="keyword">var</span> newArr = arr.splice(<span class="number">1</span>);  <span class="comment">// 如果只有一个参数, 则作为开始裁切的下标, 裁切到数组尾部</span></span><br><span class="line"><span class="keyword">var</span> newArr = arr.splice(<span class="number">1</span>,<span class="number">2</span>,<span class="number">0</span>,<span class="number">0</span>); <span class="comment">// 替换,newArr=[1, 2],arr=[1, 0, 0] </span></span><br><span class="line"><span class="keyword">var</span> newArr = arr.concat([<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>]); <span class="comment">// 不会修改原数组,会返回连接出来的新数组 [1,2,3,4,5,6]</span></span><br><span class="line"><span class="keyword">var</span> newArr = arr.join(<span class="string">&quot;-&quot;</span>);  <span class="comment">// 不会修改原数组, 返回连接过后的新字符串 1-2-3-4-5-6</span></span><br><span class="line"><span class="keyword">var</span> newArr = arr.reverse();  <span class="comment">// 会修改原数组,返回反转过后的数组 [6,5,4,3,2,1]</span></span><br></pre></td></tr></table></figure>
+<h4 id="2-filter-过滤"><a href="#2-filter-过滤" class="headerlink" title="2.filter 过滤"></a>2.filter 过滤</h4><p>创建一个新的数组，新数组中的元素是通过检查指定数组中符合条件的所有元素</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">10</span>];</span><br><span class="line"><span class="keyword">var</span> newArr = arr.filter(<span class="function"><span class="keyword">function</span> (<span class="params">ele, i, arr</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;数组的每一项 =&gt;&quot;</span>, ele);</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;数组的下标 =&gt;&quot;</span>, i);</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;数组本身 =&gt;&quot;</span>, arr);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 筛选符合条件的部分</span></span><br><span class="line">    <span class="keyword">if</span> (ele % <span class="number">2</span> == <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>; <span class="comment">// 函数执行的结果为true, 则当前元素就是过滤出来的元素, 会返回成新数组</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&quot;筛选出来的数组 =&gt;&quot;</span>, newArr); <span class="comment">// [2，4，6，8，10];</span></span><br></pre></td></tr></table></figure>
+<h4 id="3-map-迭代"><a href="#3-map-迭代" class="headerlink" title="3.map 迭代"></a>3.map 迭代</h4><p>把数组中的每一项，经过函数的处理以后,返回成新的数组</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">10</span>];</span><br><span class="line"><span class="keyword">var</span> newArr = arr.map(<span class="function"><span class="keyword">function</span> (<span class="params">e, i, arr</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;数组的每一项 =&gt;&quot;</span>, e);</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;数组的下标 =&gt;&quot;</span>, i);</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;数组本身 =&gt;&quot;</span>, arr);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 把每一个元素 放大两倍, 然后返回成新的数组</span></span><br><span class="line">    e = e * <span class="number">2</span> + <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">return</span> e;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&quot;新数组 =&gt;&quot;</span>, newArr); <span class="comment">//  [3, 5, 7, 9, 11, 13, 15, 17, 19, 21]</span></span><br></pre></td></tr></table></figure>
+<h4 id="4-forEach-遍历"><a href="#4-forEach-遍历" class="headerlink" title="4.forEach 遍历"></a>4.forEach 遍历</h4><p>用于调用数组的每一个元素，并将元素传递给回调函数，不支持 return ,没有返回值</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">10</span>];</span><br><span class="line"><span class="keyword">var</span> newArrr = arr.forEach( <span class="function"><span class="keyword">function</span>(<span class="params">ele, i, arr</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;数组的每一项 =&gt;&quot;</span>, ele);</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;数组的下标 =&gt;&quot;</span>, i);</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;数组本身 =&gt;&quot;</span>, arr);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="built_in">console</span>.log(newArr); <span class="comment">// undefined</span></span><br></pre></td></tr></table></figure>
+<h4 id="5-字符串API"><a href="#5-字符串API" class="headerlink" title="5.字符串API"></a>5.字符串API</h4><p>注意：字符串的API, 不会修改原字符串, 都是返回新的字符串 (split方法返回数组)</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str = <span class="string">&quot;hello wolrd&quot;</span>;</span><br><span class="line"><span class="keyword">var</span> newStr = str.charAt(<span class="number">0</span>);     <span class="comment">// 获取下标值 h</span></span><br><span class="line"><span class="keyword">var</span> newStr = str.charCodeAt(<span class="number">0</span>); <span class="comment">// 获取下标值并转换为unicode编码 104 </span></span><br><span class="line"><span class="keyword">var</span> newStr = <span class="built_in">String</span>.fromCharCode(<span class="number">104</span>);  <span class="comment">// 把unicode编码转成字符 h</span></span><br><span class="line"><span class="keyword">var</span> newStr = str.substring(<span class="number">1</span>,<span class="number">4</span>);<span class="comment">// 裁切字符串,从开始下标裁切到结束下标,结束下标裁切不到 ell</span></span><br><span class="line"><span class="keyword">var</span> newStr = str.split(<span class="string">&quot; &quot;</span>);    <span class="comment">// 把字符串切割成数组 [&quot;hello&quot;, &quot;wolrd&quot;]</span></span><br><span class="line"><span class="keyword">var</span> newStr = str.repeat(<span class="number">2</span>);     <span class="comment">// 重复字符串 hello wolrdhello wolrd</span></span><br><span class="line"><span class="keyword">var</span> newStr = str.trim();        <span class="comment">// 去除字符串左右两边的空格 hello wolrd</span></span><br><span class="line"><span class="keyword">var</span> newStr = str.toLowerCase(); <span class="comment">// 把字符串转小写 hello wolrd</span></span><br><span class="line"><span class="keyword">var</span> newStr = str.toUpperCase(); <span class="comment">// 把字符串转大写 HELLO WOLRD</span></span><br><span class="line"><span class="keyword">var</span> newStr = str.replace(<span class="string">&quot;h&quot;</span>,<span class="string">&quot;w&quot;</span>); <span class="comment">// 替换 wello Wolrd</span></span><br><span class="line"><span class="keyword">var</span> newStr = str.indexOf(<span class="string">&quot;h&quot;</span>);     <span class="comment">// 从头部开始检索下标 0</span></span><br><span class="line"><span class="keyword">var</span> newStr = str.lastIndexOf(<span class="string">&quot;l&quot;</span>); <span class="comment">// 从尾部开始检索下标 8</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h3><h4 id="1-把手机号码的中间4位替换成"><a href="#1-把手机号码的中间4位替换成" class="headerlink" title="1.把手机号码的中间4位替换成 ****"></a>1.把手机号码的中间4位替换成 ****</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> phone = <span class="string">&quot;13922297693&quot;</span>;</span><br><span class="line"><span class="keyword">var</span> newPhone = phone.replace(phone.slice(<span class="number">3</span>,<span class="number">7</span>),<span class="string">&quot;*&quot;</span>.repeat(<span class="number">4</span>)); <span class="comment">// 139****7693</span></span><br></pre></td></tr></table></figure>
+<h4 id="2-创建一个替换字符串函数replaceString"><a href="#2-创建一个替换字符串函数replaceString" class="headerlink" title="2.创建一个替换字符串函数replaceString"></a>2.创建一个替换字符串函数replaceString</h4><p>函数接收三个参数 oldS旧字符, newS新字符, fullS完整字符串<br>函数返回一个新字符串，要求将完整字符串中所有旧字符替换成新字符</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">replaceString</span>(<span class="params">olds, news, fulls</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 如果完成字符串中还有旧字符串,继续循环</span></span><br><span class="line">    <span class="keyword">while</span>(fulls.indexOf(olds) != -<span class="number">1</span>)&#123;</span><br><span class="line">        <span class="comment">// 旧字符串的下标</span></span><br><span class="line">        <span class="keyword">var</span> i = fulls.indexOf(olds);</span><br><span class="line">        <span class="comment">// 旧字符串的长度</span></span><br><span class="line">        <span class="keyword">var</span> len = olds.length; </span><br><span class="line">        <span class="comment">// 新的字符串</span></span><br><span class="line">        fulls =  fulls.slice(<span class="number">0</span>,i) + news + fulls.slice(i+len);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> fulls;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> str = replaceString(<span class="string">&quot;World&quot;</span>, <span class="string">&quot;Web&quot;</span>, <span class="string">&quot;Hello World&quot;</span>); <span class="comment">// Hello Web</span></span><br></pre></td></tr></table></figure>
+
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">XIE</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://xie392.github.io/api/">https://xie392.github.io/api/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://xie392.github.io" target="_blank">XIE</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/JavaScript/">JavaScript</a></div><div class="post_share"></div></div><div class="post-reward"><div class="reward-button button--animated"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/img/wechat.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/alipay.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/dom/"><img class="prev-cover" src="/img/cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">js笔记-DOM对象</div></div></a></div><div class="next-post pull-right"><a href="/time/"><img class="next-cover" src="/img/cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">js笔记-时间对象</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/time/" title="js笔记-时间对象"><img class="cover" src="/img/cover.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-01-14</div><div class="title">js笔记-时间对象</div></div></a></div><div><a href="/dom/" title="js笔记-DOM对象"><img class="cover" src="/img/cover.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-01-14</div><div class="title">js笔记-DOM对象</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E6%95%B0%E7%BB%84API"><span class="toc-number">1.</span> <span class="toc-text">常见数组API</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E5%AD%97%E7%AC%A6%E4%B8%B2API"><span class="toc-number">2.</span> <span class="toc-text">常见字符串API</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%A8%E6%B3%95"><span class="toc-number">3.</span> <span class="toc-text">用法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E6%95%B0%E7%BB%84API"><span class="toc-number">3.1.</span> <span class="toc-text">1.数组API</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-filter-%E8%BF%87%E6%BB%A4"><span class="toc-number">3.2.</span> <span class="toc-text">2.filter 过滤</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-map-%E8%BF%AD%E4%BB%A3"><span class="toc-number">3.3.</span> <span class="toc-text">3.map 迭代</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-forEach-%E9%81%8D%E5%8E%86"><span class="toc-number">3.4.</span> <span class="toc-text">4.forEach 遍历</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-%E5%AD%97%E7%AC%A6%E4%B8%B2API"><span class="toc-number">3.5.</span> <span class="toc-text">5.字符串API</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BE%8B%E5%AD%90"><span class="toc-number">4.</span> <span class="toc-text">例子</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E6%8A%8A%E6%89%8B%E6%9C%BA%E5%8F%B7%E7%A0%81%E7%9A%84%E4%B8%AD%E9%97%B44%E4%BD%8D%E6%9B%BF%E6%8D%A2%E6%88%90"><span class="toc-number">4.1.</span> <span class="toc-text">1.把手机号码的中间4位替换成 ****</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E6%9B%BF%E6%8D%A2%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%87%BD%E6%95%B0replaceString"><span class="toc-number">4.2.</span> <span class="toc-text">2.创建一个替换字符串函数replaceString</span></a></li></ol></li></ol></div></div></div></div></main><footer id="footer" style="background-image: url('/img/cover.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By XIE</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">一个人可以被毁灭，但永远不会被打败</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="font-plus" type="button" title="放大字体"><i class="fas fa-plus"></i></button><button id="font-minus" type="button" title="缩小字体"><i class="fas fa-minus"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"></div><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-fluttering-ribbon.min.js"></script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-show-text.min.js" data-mobile="false" data-text="富强,民主,文明,和谐,自由,平等,公正,法治,爱国,敬业,诚信,友善" data-fontsize="18px" data-random="false" async="async"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
